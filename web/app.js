@@ -1,7 +1,4 @@
-const isPages = window.location.hostname.endsWith('github.io');
-const API = isPages
-  ? 'https://circular-playlist.onrender.com'
-  : window.location.origin; // use current origin so any port works
+const API = window.location.origin; // use current origin so any port works
 
 async function api(path, opts = {}) {
   const res = await fetch(API + path, {
